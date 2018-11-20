@@ -1,0 +1,441 @@
+{
+	"vocabulary": {
+		"ignored": [
+			"the", "a", "at", "to", "for", "with"
+		]
+	},
+	"init": {
+		"room": "cno025",
+		"objects": {
+		}
+	},
+	"rooms": {
+		"cno025": {
+			"short": "boat",
+			"description": "Your boat is moored at the edge of the dock. To the east, there is an entrance to the city.",
+			"bitmap": "vue_25.pak",
+			"objects": {
+				"boat": {
+					"description": "A magnificient ship, really!",
+					"takeable": false
+				}
+			},
+			"links": {
+				"east": {
+					"room": "cno026"
+				},
+				"north": {
+					"room": "cno029"
+				}				
+			}
+		},
+
+		"cno026": {
+			"short": "mosque",
+			"description": "You move forward a little along the dock. The lighthouse seems deserted; a magnificent and very old mosque has been erected here.",
+			"bitmap": "vue_26.pak",
+			"objects": {
+				"cat": {
+					"description": "He implores you with his eyes! What a showman!",
+					"takeable": false
+				},
+				"well-fed cat": {
+					"description": "The cat is well-fed without a doubt! Hmm...",
+					"takeable": false,
+					"visible": false
+				},
+				"mosque": {
+					"description": "It’s closed!",
+					"takeable": false
+				}
+			},
+			"links": {
+				"west": {
+					"room": "cno025"
+				},
+				"east": {
+					"room": "cno027"
+				}
+			}
+		},
+
+		"cno027": {
+			"short": "fishermen",
+			"description": "A light ripple against the shore accompanies the few fishermen in their boats.",
+			"bitmap": "vue_27.pak",			
+			"objects": {
+				"fisherman": {
+					"takeable": false
+				}
+			},
+			"links": {
+				"east": {
+					"room": "cno028"
+				},
+				"west": {
+					"room": "cno026"
+				}
+			}
+		},
+
+		"cno028": {
+			"short": "rack",
+			"description": "At the other end of the dock, there is a drying rack for fish and octopus.",
+			"bitmap": "vue_28.pak",
+			"objects": {
+				"drying rack": {
+					"takeable": false
+				}
+			},
+			"links": {
+				"west": {
+					"room": "cno027"
+				}
+			}
+		},
+
+		"cno029": {
+			"short": "west entrance",
+			"description": "You are at the west entrance of the village. Going south takes you back to the dock.",
+			"bitmap": "vue_29.pak",
+			"objects": {
+				"pot": {
+					"description": "A vase planted with a few flowers.",
+					"takeable": false,
+					"interaction": [  
+						{
+							"action": {
+								"verb": "look"
+							},
+							"feedback": {
+								"response": "A vase planted with a few flowers.",
+								"callback": "show",
+								"target": "flower"
+							}
+						}
+					]
+				},
+				"flower": {
+					"description": "These are crocuses.",
+					"visible": false
+				}
+			},
+			"links": {
+				"north": {
+					"room": "cno030"
+				},
+				"east": {
+					"room": "cno036"
+				},							
+				"south": {
+					"room": "cno025"
+				}
+			}
+		},
+
+		"cno030": {
+			"short": "street",
+			"description": "A few little houses here and there, one of which seems to be a shop.",
+			"bitmap": "vue_30.pak",
+			"objects": {
+				"shop": {
+					"description": "This little house is a wine merchant’s stall.",
+					"takeable": false
+				}
+			},
+			"links": {
+				"north": {
+					"room": "cno032"
+				},
+				"west": {
+					"room": "cno031"
+				},							
+				"south": {
+					"room": "cno029"
+				}
+			}
+		},
+
+		"cno031": {
+			"short": "wine shop",
+			"description": "All sorts of amphoras are stacked here, and the wine merchant looks at you with interest.",
+			"bitmap": "vue_31.pak",
+			"objects": {
+				"amphora": {
+					"description": "Magnificent antique amphoras, made in a way only the Minoan civilisation does.",
+					"takeable": false
+				},
+				"filled oinochoe": {
+					"visible": false
+				},
+				"shopkeeper": {
+					"description": "...",
+					"takeable": false,
+					"dialogue": [
+							{ "question": "Hello", "answer": "Hello stranger, are you interested in my wine."},
+							{ "question": "Ask about wine", "answer": "My wine is famous throughout the region. You know, the faint scent of saffron is a real success!"},
+							{ "question": "Ask about Altos", "answer": "Altos is my friend, I’m afraid that he might be in danger."}
+						],
+					"interaction": [
+						{
+							"action": {
+								"verb": "give",
+								"subject": "saffron"
+							},
+							"feedback": {
+								"response": "Ah! Thank you, this ingredient is rare for me, I owe you big time..."
+							}
+						},
+						{
+							"action": {
+								"verb": "give",
+								"object": "oinochoe"
+							},
+							"feedback": {
+								"response": "That’s such a beautiful oinochoe, I’ll fill it up with nectar for you. You’ll tell me what happens to it! Take care though, eh?",
+								"callback": "acquire",
+								"target": "filled oinochoe"									
+							}
+						}
+					]
+				}
+			},
+			"links": {
+				"east": {
+					"room": "cno030"
+				}
+			}
+		},
+
+		"cno032":{
+			"short": "village",
+			"description": "You journey through the village, a seemingly playful dog watches you and wags his tail.",
+			"bitmap": "vue_32.pak",
+			"objects": {
+				"dog": {
+					"description": "He’s obviously waiting to run after something!",
+					"takeable": false
+				}
+			},
+			"links": {
+				"south": {
+					"room": "cno030"
+				},
+				"east": {
+					"room": "cno033"
+				}
+			}
+		},
+
+		"cno033":{
+			"short": "square",
+			"description": "You move forward along the square. Time seems frozen in these old stones!",
+			"bitmap": "vue_33.pak",
+			"objects": {
+				"tree": {
+					"description": "A beautiful olive tree.",
+					"takeable": false
+				}
+			},
+			"links": {
+				"north": {
+					"room": "cno034"
+				},
+				"west": {
+					"room": "cno032"
+				},
+				"south": {
+					"room": "cno036"
+				}
+			}
+		},
+
+		"cno034":{
+			"short": "inn entrance",
+			"description": "You climb the few steps that separate you from the arbour.",
+			"bitmap": "vue_34.pak",
+			"objects": {
+				"Lilla": {
+					"description": "Lilla seems to be waiting for you in front of the inn.",
+					"takeable": false
+				}
+			},
+			"links": {
+				"north": {
+					"room": "cno041"
+				},
+				"south": {
+					"room": "cno033"
+				}
+			}
+		},
+
+		"cno035":{
+			"short": "inn",
+			"description": "You’re in the inn, the surrounding is relaxed. All you can hear is heavy snoring.",
+			"bitmap": "vue_35.pak",
+			"objects": {
+				"innkeeper": {
+					"description": "The innkeeper seems to consume more than he serves, he’s slumped behind the counter.",
+					"takeable": false
+				}
+			},
+			"links": {
+				"east": {
+					"room": "cno034"
+				}
+			}
+		},
+
+		"cno036":{
+			"short": "village",
+			"description": "You walk in the village. It seems to be asleep.",
+			"bitmap": "vue_36.pak",
+			"links": {
+				"north": {
+					"room": "cno033"
+				},
+				"east": {
+					"room": "cno037"
+				},
+				"west": {
+					"room": "cno029"
+				}
+			}
+		},
+
+		"cno037":{
+			"short": "village",
+			"description": "You’re at the southern edge of the village. This intricately carved door seems well guarded. Be wary...",
+			"bitmap": "vue_37.pak",
+			"objects": {
+				"door": {
+					"description": "The door is guarded.",
+					"takeable": false
+				},
+				"guard": {
+					"takeable": false
+				}
+			},
+			"links": {
+				"west": {
+					"room": "cno036"
+				}
+			}
+		},
+
+		"cno038":{
+			"short": "room",
+			"description": "This room has been turned upside down... Those responsible were looking for something...",
+			"bitmap": "vue_38.pak",
+			"objects": {
+				"oinochoe": {
+					"description": "What a beautiful oinochoe!",
+					"takeable": true
+				},
+				"mess": {
+					"description": "It seems that they haven’t spared anything, except maybe various pots and pitchers.",
+					"takeable": false
+				},
+				"chest": {
+					"description": "There’s nothing interesting there.",
+					"takeable": false
+				}
+			},
+			"links": {
+				"north": {
+					"room": "cno039"
+				},				
+				"south": {
+					"room": "cno037"
+				}
+			}
+		},
+
+		"cno039":{
+			"short": "room",
+			"description": "They haven’t spared anything here either. What a rampage!",
+			"bitmap": "vue_39.pak",
+			"objects": {
+				"board": {
+					"description": "The board topples over, revealing a series of strange symbols. This may well be what the perpetrators were looking for.",
+					"takeable": false
+				},
+				"symbols": {
+					"description": "Strange symbols.",
+					"takeable": false
+				}
+			},
+			"links": {
+				"south": {
+					"room": "cno038"
+				}
+			}
+		},
+
+		"cno040":{
+			"short": "secret room",
+			"description": "The mechanism gave you access to this room. A pedestal is in its centre.",
+			"bitmap": "vue_40.pak",
+			"objects": {
+				"tentacle": {
+					"description": "A fossilized tentacle rests on it. Expect to see a huge stone emerge if you take it!",
+					"takeable": true
+				},
+				"pedestal": {
+					"description": "Nothing but this pedestal, which takes centre stage.",
+					"takeable": false
+				}
+			},
+			"links": {
+				"south": {
+					"room": "cno039"
+				}
+			}
+		},
+
+		"cno041":{
+			"short": "end of the village",
+			"description": "It’s impossible to go further. A street peddler is standing here.",
+			"bitmap": "vue_41.pak",
+			"objects": {
+				"peddler": {
+					"description": "A street peddler is standing standing in front of you.",
+					"takeable": false,
+					"interaction": [
+						{
+							"action": {
+								"verb": "give", 
+								"subject": "flower"
+							},
+							"feedback": {
+								"response": "Thank you! Here, take some saffron in exchange.",
+								"callback": "acquire",
+								"target": "saffron"
+							}
+						}
+					]
+				},
+				"doors": {
+					"description": "Both doors appear to be closed.",
+					"takeable": false
+				},
+				"saffron": {
+					"visible": false,
+					"takeable": true
+				}
+			},
+			"links": {
+				"south": {
+					"room": "cno034"
+				}
+			}
+		},
+
+		"cno042":{
+			"short": "with Lilla",
+			"description": "Lilla seems to be so grateful for the good news you bring that she let herself go a bit.",
+			"bitmap": "vue_42.pak"
+		}
+	}
+}
