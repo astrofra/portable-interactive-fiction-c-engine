@@ -127,18 +127,25 @@ void action_look_object(char *object_name) {
 	object_index = objectGetIndexByName(object_name);
 
 	if (object_index > -1)
+	{
 		if (OBJECT_IN_ROOM(object_index) || OBJECT_IN_INVENTORY(object_index))/* if the object is around */
-			if (objectGetVisible(object_index)) { /* if this object is visible */
+		{
+			if (objectGetVisible(object_index))
+			{ /* if this object is visible */
 				desc = objectGetDescription(object_index);
-				if (desc[0]) { /* if this object has a description */
+				if (desc[0])
+				{ /* if this object has a description */
 					printf("%s\n", desc);
 					return;
 				}
-				else {
+				else
+				{
 					printf("It's a %s.\n", objectGetName(object_index));
 					return;
 				}
 			}
+		}
+	}
 	
 	printf("There is no %s here.\n", object_name);
 }

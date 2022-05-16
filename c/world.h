@@ -41,7 +41,7 @@ typedef struct {
 	char description[MAX_DESCRIPTION_CHAR_LEN];
 	short room; /* index of the room where the object is located */
 	short interactions[MAX_INTERACTION_PER_OBJECT]; /* array of indexes */
-	short dialogues[MAX_DIALOGUE_PER_OBJECT];
+	// short dialogues[MAX_DIALOGUE_PER_OBJECT];
 	BOOL takeable; /* ex : door = false; book = true */
 	BOOL visible;
 } object;

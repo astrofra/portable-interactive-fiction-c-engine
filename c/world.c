@@ -466,7 +466,11 @@ short objectGetIndexByName(char *object_name) { /* returns the index of an objec
 char *objectGetName(short object_index) { return objects[object_index].name; }
 short objectGetRoom(short object_index) { return objects[object_index].room; }
 void objectSetRoom(short object_index, short room_index) { objects[object_index].room = room_index; }
-BOOL objectGetVisible(short object_index) { return objects[object_index].visible; }
+BOOL objectGetVisible(short object_index)
+{
+	short v = objects[object_index].visible;
+	return v;
+}
 BOOL objectGetTakeable(short object_index) { return objects[object_index].takeable; }
 char *objectGetDescription(short object_index) { return objects[object_index].description; }
 char *roomGetName(short room_index) { return rooms[room_index].name; }
