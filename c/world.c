@@ -163,9 +163,9 @@ object objects[MAX_OBJECT] = {
 		TRUE, /* Visible */
 	},
 
-	{ /* MOSQUE */
-		"mosque",
-		"It’s closed!",
+	{ /* CAT */
+		"cat",
+		"He implores you with his eyes! What a showman!",
 		1, /* cno026 */
 		{-1,-1,-1,-1,},	/*  */
 		FALSE, /* Takeable */
@@ -181,9 +181,9 @@ object objects[MAX_OBJECT] = {
 		FALSE, /* Visible */
 	},
 
-	{ /* CAT */
-		"cat",
-		"He implores you with his eyes! What a showman!",
+	{ /* MOSQUE */
+		"mosque",
+		"It’s closed!",
 		1, /* cno026 */
 		{-1,-1,-1,-1,},	/*  */
 		FALSE, /* Takeable */
@@ -223,7 +223,7 @@ object objects[MAX_OBJECT] = {
 		4, /* cno029 */
 		{-1,-1,-1,-1,},	/*  */
 		TRUE, /* Takeable */
-		FALSE, /* Visible */
+		TRUE, /* Visible */
 	},
 
 	{ /* SHOP */
@@ -235,11 +235,11 @@ object objects[MAX_OBJECT] = {
 		TRUE, /* Visible */
 	},
 
-	{ /* SHOPKEEPER */
-		"shopkeeper",
-		"...",
+	{ /* AMPHORA */
+		"amphora",
+		"Magnificent antique amphoras, made in a way only the Minoan civilisation does.",
 		6, /* cno031 */
-		{1,2,-1,-1,},	/*  */
+		{-1,-1,-1,-1,},	/*  */
 		FALSE, /* Takeable */
 		TRUE, /* Visible */
 	},
@@ -253,11 +253,11 @@ object objects[MAX_OBJECT] = {
 		FALSE, /* Visible */
 	},
 
-	{ /* AMPHORA */
-		"amphora",
-		"Magnificent antique amphoras, made in a way only the Minoan civilisation does.",
+	{ /* SHOPKEEPER */
+		"shopkeeper",
+		"...",
 		6, /* cno031 */
-		{-1,-1,-1,-1,},	/*  */
+		{1,2,-1,-1,},	/*  */
 		FALSE, /* Takeable */
 		TRUE, /* Visible */
 	},
@@ -316,21 +316,21 @@ object objects[MAX_OBJECT] = {
 		TRUE, /* Visible */
 	},
 
-	{ /* MESS */
-		"mess",
-		"It seems that they haven’t spared anything, except maybe various pots and pitchers.",
-		13, /* cno038 */
-		{-1,-1,-1,-1,},	/*  */
-		FALSE, /* Takeable */
-		TRUE, /* Visible */
-	},
-
 	{ /* OINOCHOE */
 		"oinochoe",
 		"What a beautiful oinochoe!",
 		13, /* cno038 */
 		{-1,-1,-1,-1,},	/*  */
 		TRUE, /* Takeable */
+		TRUE, /* Visible */
+	},
+
+	{ /* MESS */
+		"mess",
+		"It seems that they haven’t spared anything, except maybe various pots and pitchers.",
+		13, /* cno038 */
+		{-1,-1,-1,-1,},	/*  */
+		FALSE, /* Takeable */
 		TRUE, /* Visible */
 	},
 
@@ -361,21 +361,21 @@ object objects[MAX_OBJECT] = {
 		TRUE, /* Visible */
 	},
 
-	{ /* PEDESTAL */
-		"pedestal",
-		"Nothing but this pedestal, which takes centre stage.",
-		15, /* cno040 */
-		{-1,-1,-1,-1,},	/*  */
-		FALSE, /* Takeable */
-		TRUE, /* Visible */
-	},
-
 	{ /* TENTACLE */
 		"tentacle",
 		"A fossilized tentacle rests on it. Expect to see a huge stone emerge if you take it!",
 		15, /* cno040 */
 		{-1,-1,-1,-1,},	/*  */
 		TRUE, /* Takeable */
+		TRUE, /* Visible */
+	},
+
+	{ /* PEDESTAL */
+		"pedestal",
+		"Nothing but this pedestal, which takes centre stage.",
+		15, /* cno040 */
+		{-1,-1,-1,-1,},	/*  */
+		FALSE, /* Takeable */
 		TRUE, /* Visible */
 	},
 
@@ -403,7 +403,7 @@ object objects[MAX_OBJECT] = {
 		16, /* cno041 */
 		{-1,-1,-1,-1,},	/*  */
 		TRUE, /* Takeable */
-		FALSE, /* Visible */
+		TRUE, /* Visible */
 	},
 
 	/* End of objects list */
@@ -466,11 +466,7 @@ short objectGetIndexByName(char *object_name) { /* returns the index of an objec
 char *objectGetName(short object_index) { return objects[object_index].name; }
 short objectGetRoom(short object_index) { return objects[object_index].room; }
 void objectSetRoom(short object_index, short room_index) { objects[object_index].room = room_index; }
-BOOL objectGetVisible(short object_index)
-{
-	short v = objects[object_index].visible;
-	return v;
-}
+BOOL objectGetVisible(short object_index) { return objects[object_index].visible; }
 BOOL objectGetTakeable(short object_index) { return objects[object_index].takeable; }
 char *objectGetDescription(short object_index) { return objects[object_index].description; }
 char *roomGetName(short room_index) { return rooms[room_index].name; }

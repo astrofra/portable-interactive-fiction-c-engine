@@ -37,7 +37,8 @@
 			"objects": {
 				"cat": {
 					"description": "He implores you with his eyes! What a showman!",
-					"takeable": false
+					"takeable": false,
+					"visible": true
 				},
 				"well-fed cat": {
 					"description": "The cat is well-fed without a doubt! Hmm...",
@@ -117,7 +118,7 @@
 				},
 				"flower": {
 					"description": "These are crocuses.",
-					"visible": false
+					"visible": true
 				}
 			},
 			"links": {
@@ -421,7 +422,7 @@
 					"takeable": false
 				},
 				"saffron": {
-					"visible": false,
+					"visible": true,
 					"takeable": true
 				}
 			},
