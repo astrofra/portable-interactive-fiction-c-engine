@@ -1,0 +1,20 @@
+# Compiler and flags
+CC     = cc
+CFLAGS = -O2 -Wall
+
+# Sources and objects
+OBJ = main.o levenshtein.o world.o
+
+# Executable target
+main: $(OBJ)
+	$(CC) $(CFLAGS) -o $@ $(OBJ)
+
+# Dependencies
+main.o: main.c levenshtein.h world.h
+levenshtein.o: levenshtein.c
+world.o: world.c
+
+# Clean up
+.PHONY: clean
+clean:
+	rm -f *.o main
