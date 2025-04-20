@@ -11,8 +11,8 @@
 	},
 	"rooms": {
 		"cno025": {
-			"short": "boat",
-			"description": "Your boat is moored at the edge of the dock. To the east, there is an entrance to the city.",
+			"short": "harbor",
+			"description": "Your boat is moored at the edge of the dock. To the north, there is an entrance to the city.",
 			"bitmap": "vue_25.pak",
 			"objects": {
 				"boat": {
@@ -46,7 +46,7 @@
 					"visible": false
 				},
 				"mosque": {
-					"description": "It’s closed!",
+					"description": "It's closed!",
 					"takeable": false
 				}
 			},
@@ -96,8 +96,8 @@
 		},
 
 		"cno029": {
-			"short": "west entrance",
-			"description": "You are at the west entrance of the village. Going south takes you back to the dock.",
+			"short": "north entrance",
+			"description": "You are at the north entrance of the village. Going south takes you back to the dock.",
 			"bitmap": "vue_29.pak",
 			"objects": {
 				"pot": {
@@ -140,7 +140,7 @@
 			"bitmap": "vue_30.pak",
 			"objects": {
 				"shop": {
-					"description": "This little house is a wine merchant’s stall.",
+					"description": "This little house is a wine merchant's stall.",
 					"takeable": false
 				}
 			},
@@ -175,7 +175,7 @@
 					"dialogue": [
 							{ "question": "Hello", "answer": "Hello stranger, are you interested in my wine."},
 							{ "question": "Ask about wine", "answer": "My wine is famous throughout the region. You know, the faint scent of saffron is a real success!"},
-							{ "question": "Ask about Altos", "answer": "Altos is my friend, I’m afraid that he might be in danger."}
+							{ "question": "Ask about Altos", "answer": "Altos is my friend, I'm afraid that he might be in danger."}
 						],
 					"interaction": [
 						{
@@ -193,7 +193,7 @@
 								"object": "oinochoe"
 							},
 							"feedback": {
-								"response": "That’s such a beautiful oinochoe, I’ll fill it up with nectar for you. You’ll tell me what happens to it! Take care though, eh?",
+								"response": "That's such a beautiful oinochoe, I'll fill it up with nectar for you. You'll tell me what happens to it! Take care though, eh?",
 								"callback": "acquire",
 								"target": "filled oinochoe"									
 							}
@@ -214,7 +214,7 @@
 			"bitmap": "vue_32.pak",
 			"objects": {
 				"dog": {
-					"description": "He’s obviously waiting to run after something!",
+					"description": "He's obviously waiting to run after something!",
 					"takeable": false
 				}
 			},
@@ -273,11 +273,11 @@
 
 		"cno035":{
 			"short": "inn",
-			"description": "You’re in the inn, the surrounding is relaxed. All you can hear is heavy snoring.",
+			"description": "You're in the inn, the surrounding is relaxed. All you can hear is heavy snoring.",
 			"bitmap": "vue_35.pak",
 			"objects": {
 				"innkeeper": {
-					"description": "The innkeeper seems to consume more than he serves, he’s slumped behind the counter.",
+					"description": "The innkeeper seems to consume more than he serves, he's slumped behind the counter.",
 					"takeable": false
 				}
 			},
@@ -307,7 +307,7 @@
 
 		"cno037":{
 			"short": "village",
-			"description": "You’re at the southern edge of the village. This intricately carved door seems well guarded. Be wary...",
+			"description": "You're at the southern edge of the village. This intricately carved door seems well guarded. Be wary...",
 			"bitmap": "vue_37.pak",
 			"objects": {
 				"door": {
@@ -335,11 +335,11 @@
 					"takeable": true
 				},
 				"mess": {
-					"description": "It seems that they haven’t spared anything, except maybe various pots and pitchers.",
+					"description": "It seems that they haven't spared anything, except maybe various pots and pitchers.",
 					"takeable": false
 				},
 				"chest": {
-					"description": "There’s nothing interesting there.",
+					"description": "There's nothing interesting there.",
 					"takeable": false
 				}
 			},
@@ -355,7 +355,7 @@
 
 		"cno039":{
 			"short": "room",
-			"description": "They haven’t spared anything here either. What a rampage!",
+			"description": "They haven't spared anything here either. What a rampage!",
 			"bitmap": "vue_39.pak",
 			"objects": {
 				"board": {
@@ -397,7 +397,7 @@
 
 		"cno041":{
 			"short": "end of the village",
-			"description": "It’s impossible to go further. A street peddler is standing here.",
+			"description": "It's impossible to go further. A street peddler is standing here.",
 			"bitmap": "vue_41.pak",
 			"objects": {
 				"peddler": {

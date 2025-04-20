@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # text adventure parser & navigator
 #
 # Notes : each room or object is indexed with a unique ID,
@@ -76,7 +78,7 @@ if os.path.exists(world_file):
 		out = open(out_c_file, "w")
 		out_h = open(out_h_file, "w")
 
-		world = json.loads(json_data.read(), encoding="UTF8")
+		world = json.loads(json_data.read())
 
 		# enumerate rooms, object & verbs listed in a sorted way
 		for room_name in sorted(world["rooms"].keys()):

@@ -22,8 +22,8 @@ short current_room = 0;
 
 room rooms[MAX_ROOM] = {
 	{ /*    CNO025    */
-		"boat",
-		"Your boat is moored at the edge of the dock. To the east, there is an entrance to the city.",
+		"harbor",
+		"Your boat is moored at the edge of the dock. To the north, there is an entrance to the city.",
 		"vue_25.pak",
 		{4,1,-1,-1,-1,-1,-1}	/* north:CNO029,east:CNO026, */
 	},
@@ -50,8 +50,8 @@ room rooms[MAX_ROOM] = {
 	},
 
 	{ /*    CNO029    */
-		"west entrance",
-		"You are at the west entrance of the village. Going south takes you back to the dock.",
+		"north entrance",
+		"You are at the north entrance of the village. Going south takes you back to the dock.",
 		"vue_29.pak",
 		{5,11,0,-1,-1,-1,-1}	/* north:CNO030,east:CNO036,south:CNO025, */
 	},
@@ -93,7 +93,7 @@ room rooms[MAX_ROOM] = {
 
 	{ /*    CNO035    */
 		"inn",
-		"You’re in the inn, the surrounding is relaxed. All you can hear is heavy snoring.",
+		"You're in the inn, the surrounding is relaxed. All you can hear is heavy snoring.",
 		"vue_35.pak",
 		{-1,9,-1,-1,-1,-1,-1}	/* east:CNO034, */
 	},
@@ -107,7 +107,7 @@ room rooms[MAX_ROOM] = {
 
 	{ /*    CNO037    */
 		"village",
-		"You’re at the southern edge of the village. This intricately carved door seems well guarded. Be wary...",
+		"You're at the southern edge of the village. This intricately carved door seems well guarded. Be wary...",
 		"vue_37.pak",
 		{-1,-1,-1,11,-1,-1,-1}	/* west:CNO036, */
 	},
@@ -121,7 +121,7 @@ room rooms[MAX_ROOM] = {
 
 	{ /*    CNO039    */
 		"room",
-		"They haven’t spared anything here either. What a rampage!",
+		"They haven't spared anything here either. What a rampage!",
 		"vue_39.pak",
 		{-1,-1,13,-1,-1,-1,-1}	/* south:CNO038, */
 	},
@@ -135,7 +135,7 @@ room rooms[MAX_ROOM] = {
 
 	{ /*    CNO041    */
 		"end of the village",
-		"It’s impossible to go further. A street peddler is standing here.",
+		"It's impossible to go further. A street peddler is standing here.",
 		"vue_41.pak",
 		{-1,-1,9,-1,-1,-1,-1}	/* south:CNO034, */
 	},
@@ -183,7 +183,7 @@ object objects[MAX_OBJECT] = {
 
 	{ /* MOSQUE */
 		"mosque",
-		"It’s closed!",
+		"It's closed!",
 		1, /* cno026 */
 		{-1,-1,-1,-1,},	/*  */
 		FALSE, /* Takeable */
@@ -228,7 +228,7 @@ object objects[MAX_OBJECT] = {
 
 	{ /* SHOP */
 		"shop",
-		"This little house is a wine merchant’s stall.",
+		"This little house is a wine merchant's stall.",
 		5, /* cno030 */
 		{-1,-1,-1,-1,},	/*  */
 		FALSE, /* Takeable */
@@ -264,7 +264,7 @@ object objects[MAX_OBJECT] = {
 
 	{ /* DOG */
 		"dog",
-		"He’s obviously waiting to run after something!",
+		"He's obviously waiting to run after something!",
 		7, /* cno032 */
 		{-1,-1,-1,-1,},	/*  */
 		FALSE, /* Takeable */
@@ -291,7 +291,7 @@ object objects[MAX_OBJECT] = {
 
 	{ /* INNKEEPER */
 		"innkeeper",
-		"The innkeeper seems to consume more than he serves, he’s slumped behind the counter.",
+		"The innkeeper seems to consume more than he serves, he's slumped behind the counter.",
 		10, /* cno035 */
 		{-1,-1,-1,-1,},	/*  */
 		FALSE, /* Takeable */
@@ -327,7 +327,7 @@ object objects[MAX_OBJECT] = {
 
 	{ /* MESS */
 		"mess",
-		"It seems that they haven’t spared anything, except maybe various pots and pitchers.",
+		"It seems that they haven't spared anything, except maybe various pots and pitchers.",
 		13, /* cno038 */
 		{-1,-1,-1,-1,},	/*  */
 		FALSE, /* Takeable */
@@ -336,7 +336,7 @@ object objects[MAX_OBJECT] = {
 
 	{ /* CHEST */
 		"chest",
-		"There’s nothing interesting there.",
+		"There's nothing interesting there.",
 		13, /* cno038 */
 		{-1,-1,-1,-1,},	/*  */
 		FALSE, /* Takeable */
@@ -432,7 +432,7 @@ interaction interactions[MAX_INTERACTION] = {
 		6, /* shopkeeper */
 		1, /* acquire */
 		10, /* filled oinochoe */
-		"That’s such a beautiful oinochoe, I’ll fill it up with nectar for you. You’ll tell me what happens to it! Take care though, eh?",
+		"That's such a beautiful oinochoe, I'll fill it up with nectar for you. You'll tell me what happens to it! Take care though, eh?",
 	},
 	{ /* subject : peddler*/ 
 		1, /* give */
